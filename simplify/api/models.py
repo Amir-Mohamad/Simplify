@@ -11,6 +11,7 @@ class Post(models.Model):
     """
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=100)
+    description = models.CharField(max_length=3000, null=True)
     slug = models.SlugField(unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
