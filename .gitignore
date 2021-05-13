@@ -1,4 +1,7 @@
-# Django #
+node_modules
+.venv
+
+# Django 
 *.log
 *.pot
 *.pyc
