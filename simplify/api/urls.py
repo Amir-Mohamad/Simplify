@@ -8,5 +8,6 @@ router.register(r'', views.PostsViewSet, basename='posts_list')
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('<int:pk>/', views.PostDetailView.as_view(), name="detail")
 ]
