@@ -5,13 +5,10 @@ class App extends Component {
 	render() {
 		return (
 			<Fragment>
-				<Header />
-				<div className="container">
-					<Dashboard />
-				</div>
+				<h1>React app</h1>
 			</Fragment>
 		);
 	}
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById("root"));

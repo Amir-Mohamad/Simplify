@@ -29,6 +29,7 @@ INSTALLED_APPS = [
 
     # Local Apps
     'api.apps.ApiConfig',
+    'frontend',
 
     # Third Party Apps
     'corsheaders',

@@ -1,29 +1,33 @@
 {
-  "name": "simplify",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Amir-Mohamad/Simplify.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Amir-Mohamad/Simplify/issues"
-  },
-  "homepage": "https://github.com/Amir-Mohamad/Simplify#readme",
-  "devDependencies": {
-    "@babel/core": "^7.14.2",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/preset-react": "^7.13.13",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
-  }
+	"name": "simplify",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack --mode development --watch ./simplify/frontend/src/index.js -o ./simplify/frontend/static/frontend/",
+		"build": "webpack --mode production ./simplify/frontend/src/index.js --output ./simplify/frontend/static/frontend/main.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Amir-Mohamad/Simplify.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Amir-Mohamad/Simplify/issues"
+	},
+	"homepage": "https://github.com/Amir-Mohamad/Simplify#readme",
+	"devDependencies": {
+		"@babel/core": "^7.14.2",
+		"@babel/preset-env": "^7.14.2",
+		"@babel/preset-react": "^7.13.13",
+		"babel-loader": "^8.2.2",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"prop-types": "^15.7.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"webpack": "^5.37.0",
+		"webpack-cli": "^4.7.0"
+	}
 }
