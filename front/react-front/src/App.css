@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+h1 {
+	margin-top: 50px;
+}
+p {
+	color: #5e6a7a;
+}
+a {
+	color: rgb(0, 62, 197);
+	text-decoration: none;
+}
+a:hover {
+	border-bottom: 1px solid indigo;
+}
+.content {
+	margin-top: 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.content h1 {
+	font-size: 40px;
+}
+.content p {
+	margin-top: 40px;
+	color: #5e6a7a;
+	font-size: 20px;
+}
+.posts {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	grid-column-gap: 50px;
+}
+.post {
+	min-width: 20rem;
+	max-height: 10rem;
+	border: 1px solid rgb(214, 214, 214);
+	border-radius: 5px;
+	padding: 30px;
+	margin: 10px;
+}
+.post:hover {
+	transition: all 0.3s;
+	cursor: pointer;
+	border-radius: 7px;
+	background: #ffffff;
+	box-shadow: -7px 7px 14px #cfcfcf, 7px -7px 14px #ffffff;
+}
+
+/* on mobile */
+@media screen and (max-width: 732px) {
+	.content p {
+		font-size: 130%;
+	}
+	.content h1 {
+		font-size: 200%;
+	}
+	.posts {
+		font-size: 90%;
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}
