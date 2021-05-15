@@ -4,7 +4,7 @@ import PostList from "../components/PostList";
 import { Row, Col } from "react-bootstrap";
 
 // All posts
-function PostListScreen() {
+function PostsScreen() {
 	const [posts, setPosts] = useState([]);
 	useEffect(() => {
 		async function fetchPosts() {
@@ -33,4 +33,4 @@ function PostListScreen() {
 	);
 }
 
-export default PostListScreen;
+export default PostsScreen;
