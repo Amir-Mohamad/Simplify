@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, BrowserRouter as Router } from "react-router-dom";
-import PostScreen from "../screens/PostScreen";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import PostDetail from "./PostDetail";
 
 // info about each post
 function PostList({ post }) {
@@ -8,11 +8,9 @@ function PostList({ post }) {
 		<div className="post">
 			<p>{post.title}</p>
 			<br />
-			<Router>
-				<Link to={`/${post.id}`} className="post__more">
-					Read More
-				</Link>
-			</Router>
+			<Link to={`/post/${post.id}`} className="post__more">
+				Read More
+			</Link>
 		</div>
 	);
 }

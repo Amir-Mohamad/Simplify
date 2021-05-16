@@ -10,7 +10,7 @@ function PostScreen({ match }) {
 			await axios
 				.get(`http://127.0.0.1:8000/api/${match.params.id}`)
 				.then((response) => {
-					setPost(response.data.results);
+					setPost(response.data);
 				});
 		}
 
@@ -18,7 +18,7 @@ function PostScreen({ match }) {
 	}, []);
 	return (
 		<div>
-			<p>{post.title}</p>
+			<h1>{post.title}</h1>
 		</div>
 	);
 }
