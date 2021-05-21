@@ -1,21 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PostList from "../components/PostList";
-import { Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import PostsNextComponent from "../components/PostsNextComponent";
-import PostScreen from "../components/PostDetail";
+import { Row, Col } from "react-bootstrap";
 
-// All posts
-function PostsScreen() {
+function PostsNextComponent(props) {
 	const [posts, setPosts] = useState([]);
-	const [postsFullInfo, setPostsFullInfo] = useState([]);
 	useEffect(() => {
 		async function fetchPosts() {
-			await axios.get(`http://127.0.0.1:8000/api`).then((response) => {
+			await axios.get(props.nextUrl).then((response) => {
 				setPosts(response.data.results);
-				setPostsFullInfo(response.data);
 			});
 		}
 
@@ -35,14 +30,7 @@ function PostsScreen() {
 					</Col>
 				))}
 			</div>
-			{/* TODO: Pagination */}
-			<Link to="/pagination/">Next Page</Link>
-			<Route
-				path="/pagination/"
-				component={PostsNextComponent}
-				nextUrl={postsFullInfo.next}
-			/>
 		</>
 	);
 }
-export default PostsScreen;
+export default PostsNextComponent;
