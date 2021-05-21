@@ -6,10 +6,12 @@ import { Row, Col } from "react-bootstrap";
 // All posts
 function PostsScreen() {
 	const [posts, setPosts] = useState([]);
+	const [postsFullInfo, setPostsFullInfo] = useState([]);
 	useEffect(() => {
 		async function fetchPosts() {
 			await axios.get(`http://127.0.0.1:8000/api`).then((response) => {
 				setPosts(response.data.results);
+				setPostsFullInfo(response.data);
 			});
 		}
 
@@ -29,6 +31,9 @@ function PostsScreen() {
 					</Col>
 				))}
 			</div>
+			<a href={postsFullInfo.next}>Next Page</a>
+			{/* TODO: Pagination */}
+			{/* <PostsNextComponent nextUrl={postsFullInfo.next}/> */}
 		</>
 	);
 }

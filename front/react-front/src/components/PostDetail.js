@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./PostDetail.css";
 
 // The Post Detail screen
 function PostScreen({ match }) {
@@ -17,8 +18,10 @@ function PostScreen({ match }) {
 		fetchPost();
 	}, []);
 	return (
-		<div>
+		<div className="detail">
 			<h1>{post.title}</h1>
+			<p>{post.description}</p>
+			<p>created at: {post.created_at}</p>
 		</div>
 	);
 }
